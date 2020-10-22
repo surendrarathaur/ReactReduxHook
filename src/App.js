@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Test from './containers/Test'
+import Routes from './routes'
+import Context from './utils/Context'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    const [stateGlobal, setStateGlobal] = useState(0);
+
+    const incrementStateGlobal = () => {
+        setStateGlobal(stateGlobal + 1)
+    }
+
+    const decrementStateGlobal = () => {
+        setStateGlobal(stateGlobal - 1)
+    }
+
+    return (
+        <div className='App'>
+            <Context.Provider value={{ 
+                valueStateGlobal: stateGlobal,
+                addStateGlobal: () => incrementStateGlobal(),
+                removeStateGlobal: () => decrementStateGlobal()
+            }}>
+                <Routes />
+                <Test />
+            </Context.Provider>
+        </div>
+    )
 }
 
 export default App;
