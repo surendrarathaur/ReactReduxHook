@@ -13,6 +13,8 @@ const Navbar = () => {
                         <div className="dtc v-mid tr pa3">
                             <Link className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" to="/" >Login</Link>
                             <Link className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" to="/signup" >Sign Up</Link>
+                            <Link className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" to="/test" >Test Redux</Link>
+                            <Link className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" to="/counter" >Counter</Link>
                             <Link className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" to="/hook" >Hook</Link>
                             <Link className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" to="/hookform" >Hook Form</Link>
                         </div>

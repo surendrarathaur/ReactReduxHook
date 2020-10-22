@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Test from './containers/Test'
 import Routes from './routes'
 import Context from './utils/Context'
 
@@ -23,7 +22,6 @@ function App() {
                 removeStateGlobal: () => decrementStateGlobal()
             }}>
                 <Routes />
-                <Test />
             </Context.Provider>
         </div>
     )
